@@ -1,6 +1,8 @@
 name:        "Spring Boot Sample Acorn"
 description: "Acorn running a sample Petclinic Springboot app"
-readme:      "./readme.md"
+readme:      "./README.md"
+icon:        "./spring-boot-logo.svg"
+
 
 args: {
 	// Name of the database to create. Defaults to "instance"
