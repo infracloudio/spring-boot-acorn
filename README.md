@@ -1,6 +1,6 @@
 # Acorn for a Spring Boot sample app - Petclinic App
 
-This is the legendary [Petclinic App](https://github.com/spring-petclinic) build using Spring Boot. In this sample Blog Application the users can register, log in and do all the basic tasks related to creating and publishing their own blog posts.
+This is the popular [Petclinic App](https://github.com/spring-petclinic) built using Spring Boot. The Spring PetClinic is an open source sample application developed to demonstrate the database-oriented capabilities of Spring Boot, Spring MVC, and the Spring Data Framework. It’s based on this Spring stack and built with Maven. In this sample Application the pet owner can register themselves, add their pets and plan visits. 
 
-## What is Flask?
-Flask is a web framework, it’s a Python module that lets you develop web applications easily. It’s has a small and easy-to-extend core: it’s a microframework that doesn’t include an ORM (Object Relational Manager) or such features.It does have many cool features like url routing, template engine. It is a WSGI web app framework.
+## What is Spring Boot?
+Spring Boot is a project that is built on the top of the Spring Framework. It provides an easier and faster way to set up, configure, and run both simple and web-based applications. It is a Spring module that provides the RAD (Rapid Application Development) feature to the Spring Framework. It is used to create a stand-alone Spring-based application that you can just run because it needs minimal Spring configuration.
