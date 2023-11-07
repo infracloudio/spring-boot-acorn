@@ -5,8 +5,8 @@ icon:        "./spring-boot-logo.svg"
 
 
 args: {
-	// Name of the database to create. Defaults to "instance"
-	dbName: "petclinic"
+  // Name of the database to create. Defaults to "instance"
+  dbName: "petclinic"
   // Provide user for mysql. If the value is not provided, it will default to 
   user: "petclinic"
 }
