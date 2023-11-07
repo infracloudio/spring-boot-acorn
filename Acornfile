@@ -1,0 +1,42 @@
+name:        "Spring Boot Sample Acorn"
+description: "Acorn running a sample Petclinic Springboot app"
+readme:      "./README.md"
+icon:        "./spring-boot-logo.svg"
+
+
+args: {
+  // Name of the database to create. Defaults to "instance"
+  dbName: "petclinic"
+  // Provide user for mysql. If the value is not provided, it will default to 
+  user: "petclinic"
+}
+
+services: db: {
+  image: "ghcr.io/acorn-io/mariadb:v10.11.5-2"
+  serviceArgs: {
+    dbName: args.dbName
+    username: args.user
+    memory: 512Mi
+  }
+}
+
+containers: {
+  petclinic: {
+    image: "ghcr.io/infracloudio/spring-boot-petclinic-app:v1"
+    env: {
+      "SERVER_PORT": "8080"
+      "MYSQL_URL": "jdbc:@{service.db.address}"
+      "MYSQL_USER": "@{service.db.secrets.user.username}"
+      "MYSQL_PASSWORD": "@{service.db.secrets.user.password}"
+      "MYSQL_DATABASE": "@{services.db.data.dbName}"
+    }
+    memory: 512Mi
+    ports: {
+      publish: "8080/http"
+      publish: "8080/http"
+    }
+    consumes: ["db"]
+  }
+}
+
+
