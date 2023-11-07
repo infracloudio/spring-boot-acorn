@@ -14,9 +14,9 @@ args: {
 services: db: {
   image: "ghcr.io/acorn-io/mariadb:v10.11.5-2"
   serviceArgs: {
-      dbName: args.dbName
-      username: args.user
-      memory: 512Mi
+    dbName: args.dbName
+    username: args.user
+    memory: 512Mi
   }
 }
 
