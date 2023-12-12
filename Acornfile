@@ -33,10 +33,7 @@ containers: {
     memory: 512Mi
     ports: {
       publish: "8080/http"
-      publish: "8080/http"
     }
     consumes: ["db"]
   }
 }
-
-
