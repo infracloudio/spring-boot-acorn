@@ -1,15 +1,14 @@
 # Deploying Spring Boot - Petclinic App on Acorn
 
-Ready to build something awesome? Enter [Spring Boot](https://spring.io/projects/spring-boot) – the superhero of frameworks! Spring Boot deployed using cloud-native tools, ensures consistent and scalable application deployment. Paired with Kubernetes, it simplifies orchestration, enhancing developer productivity. This synergy streamlines development, secures applications, and aligns seamlessly with modern containerization trends.
+Ready to build something awesome? Enter [Spring Boot](https://spring.io/projects/spring-boot) – the superhero of frameworks! Spring Boot paired with Kubernetes, simplifies orchestration, enhancing developer productivity. This synergy streamlines development, secures applications, and aligns seamlessly with modern containerization trends.
 
-One of the most popular app developed by the Spring Framework developers to demonstrate the capabilities of Spring Boot, Spring MVC, and Spring Data Framework is the [Spring Petclinic App](https://github.com/spring-petclinic). The Spring Petclinic App community is very active and there are quite a few forks in the GitHub org [spring-petclinic](https://github.com/spring-petclinic). The Petclinic App is trying to solve a very crucial problem to provide the pets with Veterinary Care. The users can register their Pets and plan visits with their Vets to ensure their Pets well-being. To showcase this legendary application, we have deployed it on Acorn by simply as defining it with an [Acornfile](https://docs.acorn.io/reference/acornfile), generating a deployable Acorn Image. [Acorn](https://docs.acorn.io/) simplifies the building and provisioning of your containerised applications, which further provides a unique feature to share your artifacts and workloads using a link providing access to single-click deployment in a sandbox environment.  
+One of the most popular app developed by the Spring Framework developers to demonstrate the capabilities of Spring Boot, Spring MVC, and Spring Data Framework is the [Spring Petclinic App](https://github.com/spring-petclinic). The Spring Petclinic App community is very active and there are [several forks](https://spring-petclinic.github.io/docs/forks.html) in the GitHub org [spring-petclinic](https://github.com/spring-petclinic). The Petclinic App is trying to solve a very crucial problem to provide Pets with Veterinary Care. The users can register their Pets and plan visits with their Vets to ensure their Pets well-being. To showcase this legendary application, we have deployed it on Acorn by simply as defining it with an [Acornfile](https://docs.acorn.io/reference/acornfile), generating a deployable Acorn Image. [Acorn](https://docs.acorn.io/) simplifies the building and provisioning of your containerised applications, which further provides a unique feature to share your artifacts and workloads using a link providing access to single-click deployment in a sandbox environment.  
 
-If you want to check out the Petclinic Acorn for yourself, click the below link. All you need to join is a GitHub ID to create an account.
+If you want to check out the Petclinic Acorn for yourself, click the below link. All you need is a GitHub ID to create an account.
 
 [![Run in Acorn](https://acorn.io/v1-ui/run/badge?image=ghcr.io+infracloudio+spring-boot-acorn:v1.0.0-0&ref=aashimodi14)](https://acorn.io/run/ghcr.io/infracloudio/spring-boot-acorn:v1.0.0-0?ref=aashimodi14&name=petclinic-app)
 
-
-To know more about how we created the Spring Petclinic App Acorn, follow along. This tutorial will enable to make customisations in the app or your can take it up a notch and deploy an Acorn for your very own Spring Boot app.
+To know more about how we created the Spring Petclinic App Acorn, follow along. This tutorial will enable you to make customisations in the app or you can take it up a notch and deploy an Acorn for your very own Spring Boot app.
 
 > _Note: Everything shown in this tutorial can be found in [this repository](https://github.com/infracloudio/spring-boot-acorn)_.
 ## Pre-requisites
@@ -94,7 +93,7 @@ Once cloned here’s how the directory structure will look.
 
 ### Understanding the Acornfile
 
-To run the application we need an Acornfile which describes the whole application without all of the boilerplate of Kubernetes YAML files. The Acorn CLI is used to build, deploy, and operate Acorn on the Acorn cloud platform. It also can work on any Kubernetes cluster running the open source Acorn Runtime.
+To run the application we need an Acornfile which describes the whole application without all of the boilerplate of Kubernetes YAML files. The Acorn CLI is used to build, deploy, and operate Acorn on the Acorn cloud platform.
 
 Below is the Acornfile for deploying the Spring Petclinic App that we created earlier:
 
@@ -137,8 +136,8 @@ containers: {
 
 There are two components for running the Petclinic App
 
-- petclinic
-- db
+- petclinic app
+- db service
 
 The above Acornfile has the following elements:
 
@@ -154,7 +153,7 @@ The above Acornfile has the following elements:
 
 ### Running the Application
 
-Once you've logged using Acorn CLI you can directly deploy applications on the Acorn platform Sandbox plan. Run the following command from the root of the directory.
+Once you've logged using Acorn CLI you can directly deploy applications on the Acorn platform Sandbox plan. Run the following command along with custom argument values from the root of the directory.
 
 ```sh
 $ acorn run -n spring-boot . --dbName <> --user <>
